@@ -13,17 +13,17 @@
     <div class="navbar--spacer"></div>
     <!-- Links -->
     <nav class="navbar--nav">
-      <a class="navbar--nav-link ripple" href="#!">
+      <a class="navbar--nav-link ripple" href="https://twitter.com/lanrat">
         <i class="mdi mdi-twitter"></i>
         <span class="hide-on-medium">Twitter</span>
       </a>
-      <a class="navbar--nav-link ripple" href="#!">
+      <a class="navbar--nav-link ripple" href="https://github.com/lanrat">
         <i class="mdi mdi-github-circle"></i>
         <span class="hide-on-medium">Github</span>
       </a>
-      <a class="navbar--nav-link ripple" href="#!">
-        <i class="mdi mdi-google-plus"></i>
-        <span class="hide-on-medium">Google+</span>
+      <a class="navbar--nav-link ripple" href="{{@blog.url}}/rss/">
+        <i class="mdi mdi-rss"></i>
+        <span class="hide-on-medium">RSS</span>
       </a>
     </nav>
   </div>
@@ -49,6 +49,7 @@
   <div class="main--content container">
 
   {{#foreach posts}}
+    <a style="all:unset" href="{{url}}">
     {{#if image}}
       <article class="card slide image" role="article">
       <!-- Header -->
@@ -80,6 +81,7 @@
         <a class="button ripple" href="{{url}}">More</a>
       </footer>
     </article>
+    </a>
   {{/foreach}}
   </div>
 </main>
