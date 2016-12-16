@@ -1,0 +1,28 @@
+<!-- Links -->
+<nav class="navbar--nav">
+
+  {{#foreach navigation}}
+  <a class="navbar--nav-link ripple" href="{{url absolute="true"}}">
+    <span class="hide-on-medium">{{label}}</span>
+  </a>
+  {{/foreach}}
+
+  <a class="navbar--nav-link ripple" href="https://ian.ucsd.edu">
+    <i class="mdi mdi-account"></i>
+    <span class="hide-on-medium">About</span>
+  </a>
+
+  <a class="navbar--nav-link ripple" href="https://twitter.com/lanrat">
+    <i class="mdi mdi-twitter"></i>
+    <span class="hide-on-medium">Twitter</span>
+  </a>
+  <a class="navbar--nav-link ripple" href="https://github.com/lanrat">
+    <i class="mdi mdi-github-circle"></i>
+    <span class="hide-on-medium">GitHub</span>
+  </a>
+  <a class="navbar--nav-link ripple" href="{{@blog.url}}/rss/">
+    <i class="mdi mdi-rss"></i>
+    <span class="hide-on-medium">RSS</span>
+  </a>
+
+</nav>

@@ -3,7 +3,7 @@
 
 
 {{! Post navbar }}
-<nav class="navbar shaded fixed autohide">
+<nav class="navbar shaded">
   <div class="navbar--row container">
     <!-- Icon -->
     <div class="navbar--icon">
@@ -13,6 +13,12 @@
     </div>
     <!-- Title -->
     <span class="navbar--title">{{title}}</span>
+    <!-- Spacer -->
+    <div class="navbar--spacer"></div>
+
+    {{!-- The blog navigation links --}}
+    {{> navlinks}}
+
   </div>
 </nav>
 
@@ -20,7 +26,7 @@
 {{! Post header }}
 <header class="header shaded bg-darken">
   <!-- Navbar -->
-  <nav class="navbar">
+  <!-- <nav class="navbar">
     <div class="navbar--row container">
       <div class="navbar--icon">
         <a class="ripple" href="{{@blog.url}}">
@@ -28,7 +34,7 @@
         </a>
       </div>
     </div>
-  </nav>
+  </nav> -->
   <!-- Content -->
   <div class="header--content onBottom container">
     <!-- Titles -->
