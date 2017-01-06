@@ -41,17 +41,16 @@
     <h1 class="header--title">{{title}}</h1>
     <h5 class="header--subtitle">
       <i class="mdi mdi-calendar"></i>
-      <time datetime="{{date format='YYYY-MM-DD'}}"
-        itemprop="datePublished">
+      <time datetime="{{date format='YYYY-MM-DD'}}">
         {{date format='DD MMM YYYY'}}
       </time>
     </h5>
   </div>
   <!-- Background -->
   {{#if image}}
-    <img class="bg-image" src="{{image}}" />
+    <img class="bg-image" alt="Post Image" src="{{image}}" />
   {{else}}{{#if @blog.cover}}
-    <img class="bg-image" src="{{@blog.cover}}" />
+    <img class="bg-image" alt="Header" src="{{@blog.cover}}" />
   {{/if}}{{/if}}
 </header>
 
@@ -65,8 +64,8 @@
 
 
 {{! Post Main }}
-<main class="main" role="main">
-  <article class="main--content container" role="article">
+<main class="main">
+  <article class="main--content container">
 
     {{! Content }}
     <div class="post--content">{{content}}</div>

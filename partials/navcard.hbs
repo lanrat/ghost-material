@@ -1,4 +1,4 @@
-<div class="card image">
+<div class="card image" itemscope itemtype="https://schema.org/Article">
 <a style="all:unset" href="{{url}}">
   <header class="card--header bg-darken">
     <!-- Title -->
@@ -11,14 +11,14 @@
     </span>
     <!-- Image -->
     {{#if image}}
-      <img class="bg-image" src="{{image}}" />
+      <img class="bg-image" alt="Post Image"  src="{{image}}" />
     {{else}}
       <div class="bg-image no-image"></div>
     {{/if}}
   </header>
+  </a>
   <div class="card--back">
     <p>{{excerpt words="40"}}&hellip;</p>
     <a class="button solid shaded ripple right" href="{{url}}">Go</a>
   </div>
-  </a>
 </div>

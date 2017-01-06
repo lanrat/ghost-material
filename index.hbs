@@ -27,23 +27,24 @@
   </div>
   <!-- Background -->
   {{#if @blog.cover}}
-    <img class="bg-image" src="{{@blog.cover}}" />
+    <img class="bg-image" alt="Header" src="{{@blog.cover}}" />
   {{/if}}
 </header>
 
 
 {{! Blog content }}
-<main class="content" role="main">
+<main class="content">
   <div class="main--content container">
 
   {{#foreach posts}}
-    <a style="all:unset" href="{{url}}">
     {{#if image}}
-      <article class="card slide image" role="article">
+      <article class="card slide image" itemscope itemtype="https://schema.org/Article">
+      <a style="all:unset" href="{{url}}">
       <!-- Header -->
       <header class="card--header bg-darken">
     {{else}}
-      <article class="card slide" role="article">
+      <article class="card slide" itemscope itemtype="https://schema.org/Article">
+      <a style="all:unset" href="{{url}}">
       <!-- Header -->
       <header class="card--header">
     {{/if}}
@@ -56,20 +57,22 @@
           </time>
         </span>
         <!-- Image -->
-        {{#if image}}<img class="bg-image" src="{{image}}" />{{/if}}
+        {{#if image}}<img class="bg-image" alt="" src="{{image}}" />{{/if}}
       </header>
+      </a>
       <!-- Content -->
+      <a style="all:unset" href="{{url}}">
       <section class="card--main">
         <summary class="card--content" itemprop="articleBody">
           {{excerpt words="50"}}&hellip;
         </summary>
       </section>
+      </a>
       <!-- Actions -->
       <footer class="card--actions right">
         <a class="button solid shaded ripple" href="{{url}}">More</a>
       </footer>
     </article>
-    </a>
   {{/foreach}}
   </div>
 </main>
