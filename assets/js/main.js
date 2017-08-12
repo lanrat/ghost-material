@@ -88,7 +88,7 @@
       ripples.forEach(function(ripple) {
 
         ripple.addEventListener('click', function(e) {
-          console.debug('ripple effect');
+          //console.debug('ripple effect');
 
           // Create wave element
           var wave = document.createElement('div');
@@ -123,7 +123,7 @@
     // Share buttons popups
     var intents = document.querySelectorAll('.intent');
     if (intents.length) {
-      console.log('intents');
+      //console.log('intents');
       intents = Array.prototype.slice.call(intents);
       intents.forEach(function(link) {
         var url    = link.href;
