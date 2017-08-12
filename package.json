@@ -1,6 +1,16 @@
 {
-  "name": "Material",
-  "version": "1.1",
-  "author": "Ian Foster <mrlanrat@gmail.com>",
-  "license": "CC BY-SA 4.0"
+	"name": "material",
+	"version": "2.0.0",
+	"author": {
+		"email": "mrlanrat@gmail.com", 
+		"name": "LANRAT",
+		"url": "https://github.com/lanrat/ghost-material"
+	},
+	"engines": {
+		"ghost": ">=1.0.0"
+	},
+	"license": "MIT",
+	"config": {
+		"posts_per_page": 10
+	}
 }

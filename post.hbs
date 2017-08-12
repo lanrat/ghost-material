@@ -17,7 +17,7 @@
     <div class="navbar--spacer"></div>
 
     {{!-- The blog navigation links --}}
-    {{> navlinks}}
+    {{> navigation}}
 
   </div>
 </nav>
@@ -47,10 +47,10 @@
     </h5>
   </div>
   <!-- Background -->
-  {{#if image}}
-    <img class="bg-image" alt="Post Image" src="{{image}}" />
-  {{else}}{{#if @blog.cover}}
-    <img class="bg-image" alt="Header" src="{{@blog.cover}}" />
+  {{#if feature_image}}
+    <img class="bg-image" src="{{img_url feature_image}}" />
+  {{else}}{{#if @blog.cover_image}}
+    <img class="bg-image" src="{{@blog.cover_image}}" />
   {{/if}}{{/if}}
 </header>
 

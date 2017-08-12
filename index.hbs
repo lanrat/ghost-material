@@ -11,9 +11,8 @@
     <a class="navbar--title" href="{{@blog.url}}">{{@blog.title}}</a>
         <!-- Spacer -->
     <div class="navbar--spacer"></div>
-
-    {{!-- The blog navigation links --}}
-    {{> navlinks}}
+    <!-- Links -->
+    {{navigation}}
   </div>
 </nav>
 
@@ -26,8 +25,8 @@
     <h5 class="header--subtitle center">{{@blog.description}}</h5>
   </div>
   <!-- Background -->
-  {{#if @blog.cover}}
-    <img class="bg-image" alt="Header" src="{{@blog.cover}}" />
+  {{#if @blog.cover_image}}
+    <img class="bg-image" src="{{@blog.cover_image}}" />
   {{/if}}
 </header>
 
@@ -37,8 +36,8 @@
   <div class="main--content container">
 
   {{#foreach posts}}
-    {{#if image}}
-      <article class="card slide image" itemscope itemtype="https://schema.org/Article">
+    {{#if feature_image}}
+      <article class="card slide image" role="article">
       <a style="all:unset" href="{{url}}">
       <!-- Header -->
       <header class="card--header bg-darken">
@@ -57,7 +56,7 @@
           </time>
         </span>
         <!-- Image -->
-        {{#if image}}<img class="bg-image" alt="" src="{{image}}" />{{/if}}
+        {{#if feature_image}}<img class="bg-image" src="{{img_url feature_image}}" />{{/if}}
       </header>
       </a>
       <!-- Content -->
