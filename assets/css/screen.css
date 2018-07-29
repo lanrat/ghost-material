@@ -244,6 +244,7 @@ strong, b {
   font-size: 2rem;
   line-height: 2rem;
   margin: 0;
+  text-shadow: 1px 1px grey;
 }
 .header--subtitle {
   font-size: 1.3rem;
